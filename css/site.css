@@ -1,0 +1,199 @@
+/* line 1, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+body {
+  display: flex;
+  background-color: #F5F5F5;
+  font-family: 'Quicksand';
+  height: 100%;
+  padding-top: 70px;
+  padding-bottom: 25px; }
+
+/* line 10, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+#flex-container {
+  display: flex;
+  flex: 1;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 80%; }
+
+/* line 22, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+#navigation ul {
+  overflow: hidden; }
+  /* line 24, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #navigation ul li {
+    display: inline; }
+    /* line 26, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+    #navigation ul li a {
+      display: inline-block;
+      color: #000000;
+      text-decoration: none;
+      padding: 16px; }
+    /* line 33, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+    #navigation ul li:last-child a {
+      padding: 16px 16px 15px; }
+    /* line 39, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+    #navigation ul li:not(:first-child) a:hover {
+      background: #006AA4; }
+
+/* line 48, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.nav-wrapper {
+  position: fixed;
+  max-height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  width: 100%;
+  z-index: 1000;
+  text-align: center;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 8px #E1E1E1; }
+
+/* line 62, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.content {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  width: 50%;
+  box-shadow: 0px 5px 8px #E1E1E1; }
+  /* line 68, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content h1 {
+    font-size: 1.5em;
+    padding-bottom: 3px; }
+  /* line 72, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content h2 {
+    color: #333333;
+    padding: 10px 0px 10px;
+    font-size: 1.3em; }
+  /* line 77, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content p {
+    padding: 10px 0px 10px; }
+  /* line 80, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content a {
+    color: black; }
+    /* line 82, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+    .content a:hover {
+      text-decoration: none;
+      color: #888888; }
+  /* line 87, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content img {
+    width: 100%; }
+
+/* line 93, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.half {
+  max-width: 35%; }
+
+/* line 97, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.blogpost {
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+  background-color: #FFFFFF;
+  max-width: 50%;
+  overflow: hidden; }
+  /* line 102, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .blogpost h1 {
+    font-size: 1.5em; }
+
+/* line 109, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.button {
+  text-decoration: none;
+  background-color: #006AA4;
+  padding: 5px;
+  margin: 20p;
+  color: #000000;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s; }
+  /* line 117, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .button:hover {
+    background-color: #339DD7; }
+
+/* line 122, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.sidebar {
+  order: -1;
+  flex: 0 0;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px;
+  padding: 0px 5px 15px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  min-width: 20%;
+  box-shadow: 0px 5px 8px #E1E1E1; }
+  /* line 134, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .sidebar h1 {
+    font-weight: bold;
+    margin: 10px;
+    font-size: 1.5em; }
+  /* line 139, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .sidebar p {
+    padding: 10px 0px 20px; }
+
+/* line 145, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+.img-button {
+  position: relative;
+  width: 50%;
+  filter: gray;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease-in-out; }
+  /* line 157, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .img-button:hover {
+    filter: none;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    transform: translateY(-4px); }
+
+/* Dektop
+================================================== */
+@media only screen and (min-width: 768px) {
+  /* line 171, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #navigation li:last-child {
+    display: none; } }
+
+/* Tablet (Portrait)
+================================================== */
+/* Mobile (Portrait & Landscape)
+================================================== */
+@media only screen and (max-width: 767px) {
+  /* line 189, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #flex-container {
+    flex-direction: column; }
+  /* line 192, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .content {
+    width: 100%;
+    margin: 10px 0px 10px; }
+  /* line 196, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .half {
+    max-width: 100%; }
+  /* line 199, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .sidebar {
+    flex: 1;
+    width: 100%;
+    margin: 10px 0px 10px; }
+  /* line 204, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  .img-button {
+    width: 25%; }
+  /* line 209, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #navigation li:not(:first-child) {
+    display: none; }
+  /* line 212, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #navigation li:first-child {
+    float: left; }
+  /* line 215, C:/XAMMP/htdocs/chris.soberon.be/css/site.scss */
+  #navigation li:last-child {
+    display: inline-block;
+    float: right; } }
+
+/* Mobile (Landscape)
+================================================== */
+
+/*# sourceMappingURL=site.css.map */

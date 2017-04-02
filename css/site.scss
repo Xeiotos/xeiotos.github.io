@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    background-color: #F5F5F5;
+    font-family: 'Quicksand';
+    height: 100%;
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+
+#flex-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    min-height: 100%;
+    width: 80%
+}
+
+#navigation {
+    ul {
+        overflow: hidden;
+        li {
+            display: inline;
+            a {
+                display: inline-block;
+                color: #000000;
+                text-decoration: none;
+                padding: 16px;
+            }
+            &:last-child {
+                a {
+                    padding: 16px 16px 15px;
+                }
+            }
+            &:not(:first-child) {
+                a {
+                    &:hover {
+                        background: #006AA4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nav-wrapper {
+    position: fixed;
+    max-height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 8px #E1E1E1;
+}
+
+.content {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    width: 50%;
+    h1 {
+        font-size: 1.5em;
+        padding-bottom: 3px;
+    }
+    h2 {
+        color: #333333;
+        padding: 10px 0px 10px;
+        font-size: 1.3em;
+    }
+    p {
+        padding: 10px 0px 10px;
+    }
+    a {
+        color: black;
+        &:hover {
+            text-decoration: none;
+            color: #888888;
+        }
+    }
+    img {
+        width: 100%;
+    }
+    box-shadow: 0px 5px 8px #E1E1E1;
+}
+
+.half {
+    max-width: 35%;
+}
+
+.blogpost {
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    h1 {
+        font-size: 1.5em;
+    }
+    max-width: 50%;
+    overflow: hidden;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #006AA4;
+    padding: 5px;
+    margin: 20p;
+    color: #000000;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    &:hover {
+        background-color: #339DD7;
+    }
+}
+
+.sidebar {
+    //position: absolute;
+    //right: 10%;
+    order: -1;
+    flex: 0 0;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 10px;
+    padding: 0px 5px 15px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    min-width: 20%;
+    h1 {
+        font-weight: bold;
+        margin: 10px;
+        font-size: 1.5em;
+    }
+    p {
+        padding: 10px 0px 20px;
+    }
+    box-shadow: 0px 5px 8px #E1E1E1;
+}
+
+.img-button {
+    position: relative;
+    width: 50%;
+    filter: gray;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        filter: none;
+        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+        transform: translateY(-4px);
+    }
+}
+
+/* Dektop
+================================================== */
+
+@media only screen and (min-width: 768px) {
+    #navigation {
+        li {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Tablet (Portrait)
+================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+
+/* Mobile (Portrait & Landscape)
+================================================== */
+
+@media only screen and (max-width: 767px) {
+    #flex-container {
+        flex-direction: column;
+    }
+    .content {
+        width: 100%;
+        margin: 10px 0px 10px;
+    }
+    .half {
+        max-width: 100%;
+    }
+    .sidebar {
+        flex: 1;
+        width: 100%;
+        margin: 10px 0px 10px;
+    }
+    .img-button {
+        width: 25%;
+    }
+    #navigation {
+        li {
+            &:not(:first-child) {
+                display: none;
+            }
+            &:first-child {
+                float: left;
+            }
+            &:last-child {
+                display: inline-block;
+                float: right;
+            }
+        }
+    }
+}
+
+
+/* Mobile (Landscape)
+================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
