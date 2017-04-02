@@ -7,7 +7,7 @@ $(document).ready(function () {
     a.onclick = function () {
         if (imgnr === 0) {
             $(".content").fadeToggle(400);
-            var folder = "images/photography/";
+            var folder = "/images/photography/";
             $.ajax({
                 url: folder,
                 success: function (data) {
